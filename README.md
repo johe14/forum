@@ -38,21 +38,21 @@ The following external modules are included and subject to its own license.
 - Website: [http://modernizr.com/](http://modernizr.com/)
 - Version: 2.6.2
 - License: MIT license
-- Path: included in webroot/js/modernizr.js
+- Path: included in `webroot/js/modernizr.js`
 
 **PHP Markdown**
 
 - Website: [http://michelf.ca/projects/php-markdown/](http://michelf.ca/projects/php-markdown/)
 - Version: 1.4.0, November 29, 2013
 - License: PHP Markdown Lib Copyright © 2004-2013 Michel Fortin [http://michelf.ca/](http://michelf.ca/)
-- Path: included in 3pp/php-markdown
+- Path: included in `3pp/php-markdown`
 
 
 ## The theme
 
 The theme is based on LESS, see link [http://lesscss.org/](http://lesscss.org/)
 
-The script, style.php, is a wrapper to the lessphp compiler, enabling autocompiling of LESS-files to a CSS-file and utilizing gzip and browser caching together with easy access to configuration options through a config-file. Read more at [https://github.com/mosbth/stylephp](https://github.com/mosbth/stylephp)
+The script, `style.php`, is a wrapper to the lessphp compiler, enabling autocompiling of LESS-files to a CSS-file and utilizing gzip and browser caching together with easy access to configuration options through a config-file. Read more at [https://github.com/mosbth/stylephp](https://github.com/mosbth/stylephp)
 
 The theme is responsive.
 
@@ -63,12 +63,12 @@ Font Awesome is included in the theme (version 4.6.3). See [http://fortawesome.g
 
 - Clone the project: [https://github.com/johe14/forum](https://github.com/johe14/forum)
 - Run composer and use the composer update command to install the dependencies.
-- In forum/webroot/.htaccess change ReWriteBase according to your folder structure on server, or remove ReWriteBase when testing with localhost.
+- In `forum/webroot/.htaccess` change `ReWriteBase` according to your folder structure on server, or remove `ReWriteBase` when testing with localhost.
 
 ### Setup database
 
-- Create the database, see SQL commands in file: setup-db.txt
-- Go to the file app/config/database\_mysql.php and enter your database connection details
+- Create the database, see SQL commands in file: `setup-db.txt`
+- Go to the file `app/config/database/_mysql.php` and enter your database connection details
 - Login as admin (psw: adminadmin)
 - Run the setup functions for reset user and forum database tables
   - See in menu: Forum/Reset the forum database
@@ -77,13 +77,13 @@ Font Awesome is included in the theme (version 4.6.3). See [http://fortawesome.g
 
 ### Theme settings
 
-- Make the directory webroot/css/anax-grid and the subfolders writable by the webserver. It will create the files style.less.cache and style.css.
+- Make the directory `webroot/css/anax-grid` and the subfolders writable by the webserver. It will create the files `style.less.cache` and `style.css`.
 
-chmod 777 anax-grid
+  `chmod 777 anax-grid`
 
 ### Verify installation
 
-- Point your browser to webroot/index.php
+- Point your browser to `webroot/index.php`
 
 
 ## History
@@ -92,3 +92,7 @@ v1.0.0 (2018-01-12)
 
 - First release.
 
+```
+ .  
+..:  Copyright (c) 2018 Johan Hestrell 
+```
