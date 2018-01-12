@@ -1,0 +1,67 @@
+DROP TABLE IF EXISTS comment;
+
+CREATE TABLE comment (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    page varchar(20) NOT NULL,
+    name varchar(80),
+    email varchar(80),
+    web varchar(80),
+    question varchar(255),
+    content varchar(255),
+    tags varchar(80),
+    created datetime,
+    updated datetime,
+    deleted datetime,
+    PRIMARY KEY (id)
+);
+
+
+DROP TABLE IF EXISTS answers;
+
+CREATE TABLE answers (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    name varchar(80),
+    email varchar(80),
+    questionID varchar(80),
+    content varchar(255), 
+    created datetime,
+    updated datetime,
+    deleted datetime,
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS replies;
+
+CREATE TABLE replies (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    name varchar(80),
+    email varchar(80),
+    type varchar(80),
+    referenceID varchar(80),
+    content varchar(255), 
+    created datetime,
+    updated datetime,
+    deleted datetime,
+    deletedBy varchar(80), 
+    PRIMARY KEY (id)
+);
+
+
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    acronym varchar(20) NOT NULL UNIQUE,
+    email varchar(80),
+    name varchar(80),
+    password varchar(255), 
+    created datetime,
+    updated datetime,
+    deleted datetime,
+    active datetime,
+    PRIMARY KEY (id)
+);
+
+
+INSERT INTO user (acronym, email, name, password, created, active)
+VALUES (admin, admin@bth.se, Super Admin, adminadmin, NOW(), NOW());
